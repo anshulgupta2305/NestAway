@@ -15,7 +15,7 @@ A full-stack accommodation listing application built with Node.js, Express.js, M
 - Async error forwarding with `wrapAsync`
 - Dynamic EJS templates
 - REST-style routes
-- Responsive, portfolio-focused UI
+- Responsive and portfolio-focused UI
 - Sample data seeding script
 - Invalid MongoDB ObjectId handling
 - Custom 404 and error pages
@@ -60,46 +60,3 @@ EJS Template
 HTML Response
    ↓
 Browser
-
-
-
-
-
-
-
-Project Structure 
-
-
-
-
-NestAway/
-├── app.js
-├── package.json
-├── .env.example
-├── .gitignore
-├── initData.js
-├── README.md
-├── schema.js
-├── middleware/
-│   └── validateListing.js
-├── models/
-│   └── listing.js
-├── routes/
-│   └── listing.js
-├── utils/
-│   ├── ExpressError.js
-│   └── wrapAsync.js
-├── public/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-└── views/
-    ├── layouts/
-    │   └── boilerplate.ejs
-    ├── listings/
-    │   ├── index.ejs
-    │   ├── show.ejs
-    │   ├── new.ejs
-    │   └── edit.ejs
-    └── error.ejs
