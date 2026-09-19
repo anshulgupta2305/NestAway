@@ -100,3 +100,16 @@ NestAway/
     └── error.ejs
 
 ```
+## 🖼️ Screenshots
+
+### Home Page
+
+![NestAway Home Page](screenshots/home.png)
+
+### Listings
+
+![NestAway Listings](screenshots/listings.png)
+
+### Add New Listing
+
+![Add New Listing](screenshots/add-listing.png)
