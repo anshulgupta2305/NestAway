@@ -1,0 +1,50 @@
+<% layout("layouts/boilerplate") -%>
+
+<section class="form-page">
+  <div class="form-header">
+    <a href="/listings" class="back-link">← Back to stays</a>
+    <p class="eyebrow">CREATE</p>
+    <h1>Add a new stay.</h1>
+    <p>Share the details of your accommodation with future guests.</p>
+  </div>
+
+  <form class="listing-form" action="/listings" method="POST">
+    <div class="form-field full-width">
+      <label for="title">Listing title</label>
+      <input id="title" name="listing[title]" type="text" placeholder="Modern apartment in the city" required>
+    </div>
+
+    <div class="form-field full-width">
+      <label for="description">Description</label>
+      <textarea id="description" name="listing[description]" rows="6" placeholder="Tell guests what makes this stay special..." required></textarea>
+    </div>
+
+    <div class="form-field full-width">
+      <label for="image">Image URL</label>
+      <input id="image" name="listing[image]" type="url" placeholder="https://images.unsplash.com/...">
+      <small>Use a publicly accessible image URL.</small>
+    </div>
+
+    <div class="form-row">
+      <div class="form-field">
+        <label for="price">Price per night</label>
+        <div class="input-prefix">
+          <span>₹</span>
+          <input id="price" name="listing[price]" type="number" min="0" placeholder="2500" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="location">Location</label>
+        <input id="location" name="listing[location]" type="text" placeholder="Bhopal" required>
+      </div>
+    </div>
+
+    <div class="form-field full-width">
+      <label for="country">Country</label>
+      <input id="country" name="listing[country]" type="text" placeholder="India" required>
+    </div>
+
+    <button class="submit-button" type="submit">Create listing <span>→</span></button>
+  </form>
+</section>

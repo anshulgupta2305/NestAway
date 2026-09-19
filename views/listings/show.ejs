@@ -1,0 +1,46 @@
+<% layout("layouts/boilerplate") -%>
+
+<section class="detail-page">
+  <a href="/listings" class="back-link">← Back to all stays</a>
+
+  <div class="detail-layout">
+    <div class="detail-media">
+      <img src="<%= listing.image %>" alt="<%= listing.title %>">
+      <div class="image-caption">
+        <span>Featured stay</span>
+        <span><%= listing.location %></span>
+      </div>
+    </div>
+
+    <div class="detail-copy">
+      <p class="eyebrow">ACCOMMODATION</p>
+      <h1><%= listing.title %></h1>
+
+      <p class="detail-location">
+        <span>⌖</span> <%= listing.location %>, <%= listing.country %>
+      </p>
+
+      <div class="detail-price">
+        <strong>₹<%= listing.price.toLocaleString("en-IN") %></strong>
+        <span> / night</span>
+      </div>
+
+      <div class="detail-divider"></div>
+
+      <h2>About this stay</h2>
+      <p class="detail-description"><%= listing.description %></p>
+
+      <div class="detail-actions">
+        <a class="action-button primary-action" href="/listings/<%= listing._id %>/edit">
+          Edit listing
+        </a>
+
+        <form action="/listings/<%= listing._id %>?_method=DELETE" method="POST">
+          <button class="action-button delete-action" type="submit">
+            Delete
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

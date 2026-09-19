@@ -1,0 +1,49 @@
+<% layout("layouts/boilerplate") -%>
+
+<section class="form-page">
+  <div class="form-header">
+    <a href="/listings/<%= listing._id %>" class="back-link">← Back to stay</a>
+    <p class="eyebrow">UPDATE</p>
+    <h1>Make it even better.</h1>
+    <p>Update the details of your accommodation listing.</p>
+  </div>
+
+  <form class="listing-form" action="/listings/<%= listing._id %>?_method=PUT" method="POST">
+    <div class="form-field full-width">
+      <label for="title">Listing title</label>
+      <input id="title" name="listing[title]" type="text" value="<%= listing.title %>" required>
+    </div>
+
+    <div class="form-field full-width">
+      <label for="description">Description</label>
+      <textarea id="description" name="listing[description]" rows="6" required><%= listing.description %></textarea>
+    </div>
+
+    <div class="form-field full-width">
+      <label for="image">Image URL</label>
+      <input id="image" name="listing[image]" type="url" value="<%= listing.image %>">
+    </div>
+
+    <div class="form-row">
+      <div class="form-field">
+        <label for="price">Price per night</label>
+        <div class="input-prefix">
+          <span>₹</span>
+          <input id="price" name="listing[price]" type="number" min="0" value="<%= listing.price %>" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="location">Location</label>
+        <input id="location" name="listing[location]" type="text" value="<%= listing.location %>" required>
+      </div>
+    </div>
+
+    <div class="form-field full-width">
+      <label for="country">Country</label>
+      <input id="country" name="listing[country]" type="text" value="<%= listing.country %>" required>
+    </div>
+
+    <button class="submit-button" type="submit">Save changes <span>→</span></button>
+  </form>
+</section>
