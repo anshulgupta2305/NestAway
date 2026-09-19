@@ -67,16 +67,6 @@ Browser
 
 ```text
 
-
-
-
-
-
-
-
-
-
-
 NestAway/
 ├── app.js
 ├── package.json
