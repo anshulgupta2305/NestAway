@@ -108,7 +108,7 @@ NestAway/
 
 ### Listings
 
-![NestAway Listings](screenshots/listings.png)
+![NestAway Listings](screenshots/listing.png)
 
 ### Add New Listing
 
