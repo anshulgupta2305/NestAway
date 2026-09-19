@@ -60,3 +60,53 @@ EJS Template
 HTML Response
    ↓
 Browser
+
+```
+
+## 📁 Project Structure
+
+```text
+
+
+
+
+
+
+
+
+
+
+
+NestAway/
+├── app.js
+├── package.json
+├── .env.example
+├── .gitignore
+├── initData.js
+├── README.md
+├── schema.js
+├── middleware/
+│   └── validateListing.js
+├── models/
+│   └── listing.js
+├── routes/
+│   └── listing.js
+├── utils/
+│   ├── ExpressError.js
+│   └── wrapAsync.js
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
+└── views/
+    ├── layouts/
+    │   └── boilerplate.ejs
+    ├── listings/
+    │   ├── index.ejs
+    │   ├── show.ejs
+    │   ├── new.ejs
+    │   └── edit.ejs
+    └── error.ejs
+
+```
