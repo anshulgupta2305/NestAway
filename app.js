@@ -50,6 +50,6 @@ app.use((err, req, res, next) => {
   res.status(status).render("error", { status, message });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`✓ NestAway running at http://localhost:${PORT}`);
 });
